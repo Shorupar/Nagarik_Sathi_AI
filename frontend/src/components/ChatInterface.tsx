@@ -67,11 +67,7 @@ export default function ChatInterface() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="bg-gradient-to-r from-red-50 via-white to-slate-50 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-950 border border-red-200 dark:border-red-500/20 rounded-2xl p-6 text-center space-y-2">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-red-500/10 text-red-400 border border-red-500/30">
-          <Cpu className="w-3 h-3" /> Powered by Open-Weight LLMs (Ollama)
-        </span>
         <h1 className="text-2xl font-extrabold text-slate-900 dark:text-white">Nagarik Sathi Open AI Agent</h1>
-        <p className="text-xs text-slate-600 dark:text-slate-400">Zero Proprietary APIs — 100% Privacy & Local Inference</p>
       </div>
 
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col h-[520px] overflow-hidden shadow-xl">
