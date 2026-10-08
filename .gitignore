@@ -1,0 +1,32 @@
+# Node.js dependencies
+
+node_modules/
+frontend/node_modules/
+
+# Next.js build files
+
+.next/
+frontend/.next/
+out/
+
+# Python virtual environment
+
+venv/
+.venv/
+
+# Python cache files
+
+**pycache**/
+*.py[cod]
+
+# Environment variables and secrets
+
+.env
+.env.local
+.env.*.local
+
+# IDE and operating system files
+
+.vscode/
+.DS_Store
+Thumbs.db
