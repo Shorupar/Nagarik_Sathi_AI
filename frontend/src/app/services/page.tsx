@@ -2,16 +2,17 @@
 
 import React, { useState } from "react";
 import { CheckCircle2, ExternalLink, Shield, DollarSign, Clock } from "lucide-react";
+import { time } from "console";
 
 export default function ServicesPage() {
   const [selected, setSelected] = useState("passport");
 
   const catalog = {
     passport: {
-      title: "e-Passport Application",
+      title: "Passport Application",
       dept: "Department of Passports",
       url: "https://nepalpassport.gov.np",
-      fee: "NPR 5,000 (34-Page Regular) / NPR 12,000 (Fast Track)",
+      fee: "NPR 5,000 (30-45 Working Days) / NPR 12,000 (Fast Track)",
       time: "3 to 15 Days",
       docs: [
         "Original Nepali Citizenship Certificate",
@@ -32,12 +33,15 @@ export default function ServicesPage() {
         "Marriage Certificate (If marital status changed)",
       ],
     },
-    pan: {
-      title: "Personal PAN (Permanent Account Number)",
-      dept: "Inland Revenue Department (IRD)",
-      url: "https://ird.gov.np",
-      fee: "Free (NPR 0)",
-      time: "1-2 Working Days",
+    license: {
+      title: "Driving License",
+      dept: "Department of Transportation Management (DoTM)",
+      url: "https://dotm.gov.np/",
+      fee:[ "Bike / Scooter (A/K): Rs. 3,000 licence fee " ,
+         "Car / Jeep / Van (B): Rs. 4,000",
+         "licence fee New application fee: Rs. 1,000"
+      ],
+      time: "1-4 Working Days",
       docs: [
         "Citizenship Scan Copy",
         "Passport Size Digital Photo",
@@ -58,9 +62,9 @@ export default function ServicesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            { id: "passport", label: "🛂 e-Passport" },
-            { id: "nid", label: "🪪 National ID (NID)" },
-            { id: "pan", label: "💰 Personal PAN" },
+            { id: "passport", label: "Passport Application" },
+            { id: "nid", label: "National ID (NID)" },
+            { id: "license", label: "Driving Licence" },
           ].map((item) => (
             <button
               key={item.id}
@@ -99,7 +103,11 @@ export default function ServicesPage() {
               <DollarSign className="w-5 h-5 text-emerald-400" />
               <div>
                 <span className="text-[10px] text-slate-500 block">Official Fee</span>
-                <span className="text-xs font-semibold text-slate-900 dark:text-white">{curr.fee}</span>
+                <div className="text-xs font-semibold text-slate-900 dark:text-white">
+                  {Array.isArray(curr.fee)
+                    ? curr.fee.map((fee) => <span key={fee} className="block">{fee}</span>)
+                    : curr.fee}
+                </div>
               </div>
             </div>
             <div className="p-3.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl flex items-center gap-3">

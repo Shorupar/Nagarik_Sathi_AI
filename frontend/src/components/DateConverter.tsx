@@ -63,7 +63,7 @@ export default function DateConverter() {
       <button
         onClick={handleConvert}
         disabled={loading}
-        className="w-full py-2 bg-red-600 hover:bg-red-500 disabled:bg-slate-800 text-white font-semibold rounded-xl text-xs flex items-center justify-center gap-2 transition"
+        className="w-full py-2 bg-red-600 hover:bg-red-500 disabled:bg-slate-300 dark:disabled:bg-slate-800 text-white font-semibold rounded-xl text-xs flex items-center justify-center gap-2 transition"
       >
         <ArrowRightLeft className="w-3.5 h-3.5" /> {loading ? "Converting..." : "Convert to AD"}
       </button>

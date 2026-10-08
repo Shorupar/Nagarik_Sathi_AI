@@ -119,7 +119,7 @@ export default function ChatInterface() {
             placeholder="Ask in English, Nepali, or Roman Nepali..."
             className="flex-1 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-red-500"
           />
-          <button onClick={() => handleSend()} disabled={isStreaming} className="px-4 py-2.5 bg-red-600 hover:bg-red-500 disabled:bg-slate-800 text-white rounded-xl text-xs font-semibold transition">
+          <button onClick={() => handleSend()} disabled={isStreaming} className="px-4 py-2.5 bg-red-600 hover:bg-red-500 disabled:bg-slate-300 dark:disabled:bg-slate-800 text-white rounded-xl text-xs font-semibold transition">
             <Send className="w-3.5 h-3.5" />
           </button>
         </div>
