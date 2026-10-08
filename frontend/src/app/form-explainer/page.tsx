@@ -1,5 +1,5 @@
 import React from "react";
-import DateConverter from "../../../components/DateConverter";
+import DateConverter from "../../components/DateConverter";
 import { FileText } from "lucide-react";
 
 export default function FormExamplePage() {

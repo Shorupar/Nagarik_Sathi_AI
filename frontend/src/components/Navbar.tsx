@@ -14,7 +14,7 @@ export default function Navbar() {
   const navs = [
     { name: "Services", href: "/services", icon: Layers },
     { name: "AI Agent", href: "/", icon: Bot },
-    { name: "Form Explainer", href: "/form-example", icon: FileText },
+    { name: "Form Explainer", href: "/form-explainer", icon: FileText },
     { name: "About Us", href: "/about", icon: Info },
   ];
 
