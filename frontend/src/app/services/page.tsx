@@ -13,7 +13,7 @@ export default function ServicesPage() {
       dept: "Department of Passports",
       url: "https://nepalpassport.gov.np",
       fee: "NPR 5,000 (30-45 Working Days) / NPR 12,000 (Fast Track)",
-      time: "3 to 15 Days",
+      time: "3 to 15 Working Days",
       docs: [
         "Original Nepali Citizenship Certificate",
         "16-Digit National Identity Number (NIN)",
@@ -41,7 +41,7 @@ export default function ServicesPage() {
          "Car / Jeep / Van (B): Rs. 4,000",
          "licence fee New application fee: Rs. 1,000"
       ],
-      time: "1-4 Working Days",
+      time: "1 to 4 Working Days",
       docs: [
         "Citizenship Scan Copy",
         "Passport Size Digital Photo",
