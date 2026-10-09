@@ -1,8 +1,14 @@
-import uuid from sqlalchemy 
-import Column, String, Numeric, Integer, Text, Date, DateTime, ForeignKey, func from sqlalchemy.dialects.postgresql 
-import UUID from pgvector.sqlalchemy 
-import Vector from app.database 
-import Base
+import uuid
+
+from pgvector.sqlalchemy import Vector
+from sqlalchemy import Column, Date, DateTime, ForeignKey, Integer, Numeric, String, Text, func
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    pass
+
 
 class User(Base):
     __tablename__ = "users"
@@ -11,6 +17,7 @@ class User(Base):
     session_token = Column(String(255), unique=True, nullable=False)
     language_preference = Column(String(20), default="roman_nepali")
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
 
 class GovernmentService(Base):
     __tablename__ = "government_services"
@@ -24,6 +31,7 @@ class GovernmentService(Base):
     base_fee_npr = Column(Numeric(10, 2), default=0.00)
     processing_days = Column(Integer)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
 
 class ServiceKnowledgeChunk(Base):
     __tablename__ = "service_knowledge_chunks"
