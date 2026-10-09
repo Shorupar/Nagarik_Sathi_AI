@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import chat, services
+from app.routers import chat, services, utilities
 
 app = FastAPI(
     title="Nagarik Sathi AI Backend",
@@ -18,6 +18,7 @@ app.add_middleware(
 
 app.include_router(chat.router, prefix="/api/v1/chat", tags=["Chat"])
 app.include_router(services.router, prefix="/api/v1/services", tags=["Services"])
+app.include_router(utilities.router, prefix="/api/v1/utilities", tags=["Utilities"])
 
 @app.get("/health")
 def health():
